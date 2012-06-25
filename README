@@ -1,0 +1,15 @@
+XRF Firmware Uploader 1.0 - a tool to upload new firmware on XRF  
+                            modules from Ciseco (www.ciseco.co.uk)
+
+Copyright (C) 2012  Marc Eberhard (eberhardma@googlemail.com)
+Tweaked by Matt Lloyd <dps.lwk at gmail.com> to work on OSX
+
+This was orignally written by Marc to update his XRF on linux
+We made some minor tweaks to get it to complie on OSX
+
+To compile on R-Pi/linux
+$ g++ xrf_firmware.cc -o xrf_frimware
+$ chmod +x xrf_firmware
+
+To run 
+$ ./xrf_firmware -d /dev/tty**** -f *****.bin
