@@ -1,15 +1,24 @@
-XRF Firmware Uploader 1.0 - a tool to upload new firmware on XRF  
-                            modules from Ciseco (www.ciseco.co.uk)
+XRF Firmware Uploader 1.0 - a tool to upload new firmware on XRF  
+                            modules from Ciseco (www.ciseco.co.uk)
 
-Copyright (C) 2012  Marc Eberhard (eberhardma@googlemail.com)
+Copyright (C) 2012  Marc Eberhard (eberhardma@googlemail.com)
 Tweaked by Matt Lloyd <dps.lwk at gmail.com> to work on OSX
 
-This was orignally written by Marc to update his XRF on linux
-We made some minor tweaks to get it to complie on OSX
+This was originally written by Marc to update his XRF on linux
+We (Ciseco) made some minor tweaks to get it to compile on OSX
 
 To compile on R-Pi/linux
-$ g++ xrf_firmware.cc -o xrf_frimware
+$ g++ xrf_firmware.cpp -o xrf_firmware
 $ chmod +x xrf_firmware
 
-To run 
+To run 
 $ ./xrf_firmware -d /dev/tty**** -f *****.bin
+
+
+Current Uploader Limits: 
+v1.0 of the uploader is only compatibly with v1.5 XRF's that are all-ready running Bootloader v3 or above.
+The uploader cannot update the Bootloader. 
+
+
+XRF firmware's for use with this program can be found here: http://openmicros.org/index.php/articles/84-xrf-basics/180-all-xrf-firmware-updates 
+For XRF support please vist the forum at http://OpenMicros.org
