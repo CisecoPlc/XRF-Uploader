@@ -457,7 +457,8 @@ int main(int argc, char** argv)
 
     }
     
-
+    cfmakeraw(&new_termios);
+    new_termios.c_oflag &= ~(ONLCR | OCRNL | ONLRET | ONOCR);
     tcsetattr(fd_device, TCSANOW, &new_termios);
     struct termios cmp_termios;
     tcgetattr(fd_device, &cmp_termios);
