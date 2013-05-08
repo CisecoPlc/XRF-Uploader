@@ -8,11 +8,11 @@ This was originally written by Marc to update his XRF on linux
 We (Ciseco) made some minor tweaks to get it to compile on OSX
 
 To compile on R-Pi/linux
-$ g++ xrf_firmware.cpp -o xrf_firmware
-$ chmod +x xrf_firmware
+$ g++ xrf_uploader.cpp -o xrf_uploader
+$ chmod +x xrf_uploader
 
 To run 
-$ ./xrf_firmware -d /dev/tty**** -f *****.bin
+$ ./xrf_uploader -d /dev/tty**** -f *****.bin
 
 
 Current Uploader Limits: 
