@@ -321,7 +321,7 @@ int main(int argc, char** argv)
     firmware* last_data = 0;
     char new_line[80];
     
-    while (fscanf(fd_firmware, "%[^\r]\n", new_line) > 0)
+    while (fscanf(fd_firmware, "%s[^\n]", new_line) > 0)
     {
         int len = strlen(new_line);
         
