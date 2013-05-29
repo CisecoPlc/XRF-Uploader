@@ -5,7 +5,7 @@
  * Copyright (C) 2012  Marc Eberhard (eberhardma@googlemail.com)
  * Tweaked by Matt Lloyd <dps.lwk at gmail.com> to work on OSX
  *
- * For all XRF related question visit the froum at http://openmicros.org
+ * For all XRF related question visit the forum at http://openmicros.org
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
