@@ -18,7 +18,9 @@ $ ./xrf_uploader -d /dev/tty**** -f *****.bin
 Current Uploader Limits: 
 v1.0 of the uploader is only compatibly with v1.5 (or later) XRF's that are all-ready running Boot-loader v3 or above.
 The uploader cannot update the Boot-loader.
-Any XRF sold by Ciseco after May 2012 can use this uplaoder.
+Any XRF/SRF sold by Ciseco after May 2012 can use this uplaoder.
+
+On OSX if you are getting stuck at opening device try using the /dev/cu.***** device
 
 XRF firmware's for use with this program can be found here: http://openmicros.org/index.php/articles/84-xrf-basics/180-all-xrf-firmware-updates 
 For XRF support please visit the forum at http://OpenMicros.org
