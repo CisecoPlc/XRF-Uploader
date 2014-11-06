@@ -471,15 +471,16 @@ int main(int argc, char** argv)
     }
 
     printf("Waiting for device to settle...\n\n");
-    sleep(2);
+    sleep(5);
     flush_device(fd_device, timeout);
     enter_command_modus(fd_device, timeout);
     info_command(fd_device, "ATVR", 2, timeout);
     execute_command(fd_device, "ATPG", "OK", timeout);
     usleep(100000);
+    flush_device(fd_device, timeout);
     send_bytes(fd_device, "~Y");
     char c_in = receive_byte(fd_device, timeout);
-    
+
     if (c_in != '3')
     {
         printf("Invalid response received\n");
@@ -549,7 +550,7 @@ int main(int argc, char** argv)
     send_bytes(fd_device, "X");
     printf("\nAll OK, XRF successfully reprogrammed!\n\n");
     printf("Waiting for device to settle...\n\n");
-    sleep(2);
+    sleep(10);
     flush_device(fd_device, timeout);
     enter_command_modus(fd_device, timeout);
     info_command(fd_device, "ATVR", 2, timeout);
