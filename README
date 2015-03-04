@@ -16,9 +16,9 @@ $ ./xrf_uploader -d /dev/tty**** -f *****.bin
 
 
 Current Uploader Limits: 
-v1.0 of the uploader is only compatibly with v1.5 (or later) XRF's that are all-ready running Boot-loader v3 or above.
+Any XRF/SRF/other radio sold by Ciseco after May 2012 can use this uplaoder.
 The uploader cannot update the Boot-loader.
-Any XRF/SRF sold by Ciseco after May 2012 can use this uplaoder.
+
 
 On OSX if you are getting stuck at opening device try using the /dev/cu.***** device
 
