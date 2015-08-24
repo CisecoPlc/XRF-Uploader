@@ -48,7 +48,8 @@ void print_usage(char* binary_name)
            "          -d <device filename>   (default %s)\n"
            "          -f <firmware filename> (required)\n"
            "          -h                     (print this help message)\n"
-           "          -t <timeout>           (default %ld seconds)\n",
+           "          -t <timeout>           (default %ld seconds)\n"
+           "          -p                     (bypass AT mode, used for device stuck in bootloader mode)\n",
      binary_name, default_baud_rate, default_device_filename, default_timeout);
 }
 
@@ -225,10 +226,11 @@ int main(int argc, char** argv)
     const char* firmware_filename = 0;
     long        timeout           = default_timeout;
     int         c;
+    bool	bypass = false;
 
     opterr = 0;
     
-    while ((c = getopt (argc, argv, "b:d:f:ht:")) != -1)
+    while ((c = getopt (argc, argv, "b:d:f:htp:")) != -1)
     {
     
         switch (c)
@@ -273,6 +275,13 @@ int main(int argc, char** argv)
             {
                 timeout = atol(optarg);
 
+                break;
+            }
+            
+            case 'p':
+            {
+            	bypass = true;
+                
                 break;
             }
             
@@ -473,9 +482,13 @@ int main(int argc, char** argv)
     printf("Waiting for device to settle...\n\n");
     sleep(2);
     flush_device(fd_device, timeout);
-    enter_command_modus(fd_device, timeout);
-    info_command(fd_device, "ATVR", 2, timeout);
-    execute_command(fd_device, "ATPG", "OK", timeout);
+    if (!bypass) {
+    	enter_command_modus(fd_device, timeout);
+    	info_command(fd_device, "ATVR", 2, timeout);
+    	execute_command(fd_device, "ATPG", "OK", timeout);
+    } else {
+    	printf("Bypassing AT mode");
+    }
     usleep(100000);
     send_bytes(fd_device, "~Y");
     char c_in = receive_byte(fd_device, timeout);
