@@ -230,7 +230,7 @@ int main(int argc, char** argv)
 
     opterr = 0;
     
-    while ((c = getopt (argc, argv, "b:d:f:htp:")) != -1)
+    while ((c = getopt (argc, argv, "b:d:f:ht:p")) != -1)
     {
     
         switch (c)
