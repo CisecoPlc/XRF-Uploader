@@ -4,6 +4,16 @@ XRF Firmware Uploader 1.0 - a tool to upload new firmware on XRF  
 Copyright (C) 2012  Marc Eberhard (eberhardma@googlemail.com)
 Tweaked by Matt Lloyd <dps.lwk at gmail.com> to work on OSX
 
+***************************************************************************************************************************************************
+********************************************************************************************************************
+This is now deprecated - please use the new uploader which can be found in 
+https://github.com/WirelessThings/WirelessThings-Firmware-Uploader
+********************************************************************************************************************
+********************************************************************************************************************
+********************************************************************************************************************
+********************************************************************************************************************
+
+
 This was originally written by Marc to update his XRF on linux
 We (Ciseco) made some minor tweaks to get it to compile on OSX
 
